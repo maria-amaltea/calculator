@@ -1,5 +1,28 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
+}
 .App {
   text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient( 73.1deg,  rgba(34,126,34,1) 8%, rgba(99,162,17,1) 86.9% );
+
+
 }
 
 .App-logo {
@@ -36,3 +59,150 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.number {
+  padding: 10px 10px;
+  font-size: 24px;
+  border: 1px solid black;
+  background-color: #666;
+  color: white;
+}
+
+.operator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  font-size: 24px;
+  border: 1px solid black;
+  background-color: #999;
+  color: white;
+
+}
+#display {
+  grid-area: display;
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: right;
+  font-family: digital;
+  font-size: 40px;
+}
+
+#displaysm {
+  grid-area: displaysm;
+  background-color: black;
+  color: lime;
+  text-align: right;
+  font-family: digital;
+  font-size: 20px;
+  width: 100%;
+}
+
+#display span, #displaysm span  {
+  margin-right: 20px;
+  line-height: 1;
+  display: block;
+  padding-top: 10px;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#add {
+  grid-area: add;
+}
+
+#substract {
+  grid-area: substract;
+}
+
+#equals {
+  grid-area: equals;
+  background-color: royalblue;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#clear {
+  grid-area: clear;
+  background-color: darkred;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+
+
+
+.calculator {
+  display: grid;
+  grid-template-areas: 
+  "displaysm displaysm displaysm displaysm"
+  "display display display display"
+  "clear clear divide multiply"
+  "seven eight nine substract"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals";
+  grid-template-rows: 50px;
+  width: 300px;
+}
+
+.calculator > div {
+  cursor: pointer;
+  
+}
+
+.calculator > div:hover {
+  box-shadow:  2px 1px 1px black inset;
+  
+}
+
+
