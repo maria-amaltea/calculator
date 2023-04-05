@@ -62,12 +62,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="calculator">
-          <div id="displaysm">
-            <span>{this.state.calculation}</span>
-          </div>
-          <div id="display">
-            <span>{this.state.screen}</span>
-          </div>
+          <div id="displaysm"> {this.state.calculation} </div>
+          <div id="display"> {this.state.screen} </div>
           <div className="operator" id="clear" onClick={() => this.handleAC()}>
             AC
           </div>
@@ -86,7 +82,7 @@ class App extends Component {
           <div className="number" onClick={() => this.handleValueChange("9")} id="nine">
             9
           </div>
-          <div className="operator" id="substract" onClick={() => this.handleOperatorChange("-")}>
+          <div className="operator" id="subtract" onClick={() => this.handleOperatorChange("-")}>
             -
           </div>
           <div className="number" onClick={() => this.handleValueChange("4")} id="four">
